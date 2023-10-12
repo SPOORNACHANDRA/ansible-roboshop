@@ -28,3 +28,4 @@
         dest: /usr/share/nginx/html
         remote_src: yes
 
+
