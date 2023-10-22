@@ -9,8 +9,8 @@
 
     - name: install mongodb
       ansible.builtin.yum:
-        - name: mongodb-org
-          state: installed
+        name: mongodb-org
+        state: installed
 
     - name: update listen address in mongodb configuration
       ansible.builtin.yum:
@@ -20,6 +20,6 @@
 
     - name: restart mongodb service
       ansible.builtin.systemd:
-        - name: mongod
-          state: restarted
-          enabled: yes
+        name: mongod
+        state: restarted
+        enabled: yes
