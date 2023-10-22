@@ -13,7 +13,7 @@
         state: installed
 
     - name: update listen address in mongodb configuration
-      ansible.builtin.yum:
+      ansible.builtin.replace:
         path: /etc/mongd.conf
         regexp: '127.0.0.1'
         replace: '0.0.0.0'
