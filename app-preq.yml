@@ -12,8 +12,6 @@
     path: /app
     state: directory
 
-
--
 - name: download and extract content
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/{{component}}.zip
