@@ -13,15 +13,10 @@
     - name: app preq
       ansible.builtin.import_tasks: app-preq.yml
 
-
-
     - name: install dependencies
       ansible.builtin.shell: pip3.6 install -r requirements.txt
       args:
         chdir: /app
-
-
-
 
     - name: setup systemd.yml service file
       ansible.builtin.import_tasks: systemd.yml
