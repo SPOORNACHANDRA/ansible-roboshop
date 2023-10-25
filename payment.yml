@@ -1,7 +1,3 @@
-- name: payment
-  hosts: all
-  become: true
-  tasks:
     - name: Install python
       ansible.builtin.yum:
         name:
