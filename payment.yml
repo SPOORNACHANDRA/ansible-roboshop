@@ -1,18 +1,8 @@
-    - name: Install python
-      ansible.builtin.yum:
-        name:
-          - python36
-          - gcc
-          - python3-devel
-        state: installed
-
-    - name: app preq
-      ansible.builtin.import_tasks: app-preq.yml
-
-    - name: install dependencies
-      ansible.builtin.shell: pip3.6 install -r requirements.txt
-      args:
-        chdir: /app
-
-    - name: setup systemd.yml service file
-      ansible.builtin.import_tasks: systemd.yml
+- name: payment
+  hosts: all
+  become: true
+  vars:
+    component: payment
+  tasks:
+    - name: import nodejs
+      ansible.builtin.import_tasks: python.yml
