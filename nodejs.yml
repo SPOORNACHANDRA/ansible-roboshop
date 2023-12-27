@@ -24,6 +24,7 @@
 - name: setup {{component}}
   ansible.builtin.import_tasks: systemd.yml
 
+
 #    - name: Check nodejs is installed
 #      ansible.builtin.shell: type npm
 #      register: command_status
